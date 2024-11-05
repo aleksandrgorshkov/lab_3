@@ -8,7 +8,7 @@ def count_letters(text):
     return letter_count
 
 def calculate_frequency(letter_count, total_letters):
-    # Вычисляем частоту каждой буквы
+
     frequency = {letter: count / total_letters for letter, count in letter_count.items()}
     return frequency
 
@@ -49,15 +49,11 @@ main_str = """
 Свои мне сказки говорил.
 """
 
-# Подсчитываем количество букв
 letter_count = count_letters(main_str)
 
-# Общее количество букв
 total_letters = sum(letter_count.values())
 
-# Вычисляем частоту букв
 frequency = calculate_frequency(letter_count, total_letters)
 
-# Распечатываем буквы и их частоту в формате "буква: частота"
 for letter, freq in sorted(frequency.items()):
     print(f"{letter}: {freq:.2f}")
